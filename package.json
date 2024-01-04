@@ -1,0 +1,89 @@
+{
+  "name": "arcf-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.23.6",
+    "@react-hook/mouse-position": "^4.1.3",
+    "@reduxjs/toolkit": "^2.0.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.3.2",
+    "bootstrap-select": "^1.13.18",
+    "bxslider": "^4.2.14",
+    "countdown": "^2.6.0",
+    "framer-motion": "^10.16.16",
+    "isotope-layout": "^3.0.6",
+    "jarallax": "^2.1.4",
+    "jquery": "^3.7.1",
+    "jquery-circle-progress": "^1.2.2",
+    "jquery-ui": "^1.13.2",
+    "jquery-validate": "^2.0.0",
+    "jquery.appear": "^1.0.1",
+    "letteringjs": "^0.7.0",
+    "lg-video": "^1.4.0",
+    "lg-zoom": "^1.3.0",
+    "lightgallery": "^2.7.2",
+    "mutationobserver-shim": "^0.3.7",
+    "next": "^14.0.3",
+    "nouislider": "^15.7.1",
+    "odometer": "^0.4.8",
+    "owl.carousel": "^2.3.4",
+    "quill": "^1.3.7",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-images": "^1.2.0-beta.7",
+    "react-measure": "^2.5.2",
+    "react-modal": "^3.16.1",
+    "react-photo-album": "^2.3.0",
+    "react-photo-gallery": "^8.0.0",
+    "react-quill": "^2.0.0",
+    "react-quilljs": "^1.3.3",
+    "react-redux": "^9.0.2",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^6.18.0",
+    "react-scripts": "5.0.1",
+    "react-scroll-to-top": "^3.0.0",
+    "react-wow": "^1.0.0",
+    "redux": "^5.0.0",
+    "swiper": "^11.0.5",
+    "timepicker": "^1.14.1",
+    "tiny-slider": "^2.9.4",
+    "vegas": "^2.5.4",
+    "web-vitals": "^2.1.4",
+    "wnumb": "^1.2.0",
+    "wowjs": "^1.1.3",
+    "yet-another-react-lightbox": "^3.15.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0"
+  }
+}

@@ -1,0 +1,262 @@
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif; */
+
+  font-family: var(--oxpins-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* FaqSection.css */
+
+.faq-one {
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-one-shape-1,
+.faq-one-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.faq-one__left,
+.faq-one__right {
+  padding: 60px;
+}
+
+.section-title__tagline {
+  display: block;
+  font-size: 18px;
+
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: var(--oxpins-base);
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.section-title__title {
+  margin: 0;
+  color: var(--oxpins-black);
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin-top: 6px;
+}
+
+.faq-one__text-1 {
+  font-size: 16px;
+  padding-bottom: 41px;
+  margin-right: 70px;
+}
+
+.thm-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 16px;
+
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.accrodion-title {
+  cursor: pointer;
+
+  position: relative;
+}
+
+.accrodion {
+  padding: 15px 30px;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 50px;
+}
+
+.accrodion-title h4 {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 28px;
+  transition: all 500ms ease;
+  color: #00715d;
+}
+
+.question-icon {
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  display: inline-block;
+  margin-left: auto; /* Align the icon to the right side */
+  cursor: pointer;
+  border-radius: 50%; /* Add border-radius to make the icon circular */
+  overflow: hidden;
+}
+
+.question-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke-width: 2;
+  transition: transform 0.3s ease, border-radius 0.3s ease; /* Add transitions for transform and border-radius */
+
+  font-weight: 900;
+  font-size: 12px;
+  color: white;
+  background-color: #283734;
+
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rotate the plus icon when the accordion is open */
+.accrodion.active .question-icon svg {
+  transform: rotate(45deg);
+  border-radius: 0; /* Remove border-radius when the accordion is open */
+}
+
+/* Add transitions for accordion content */
+.accrodion-content {
+  display: none;
+  padding: 15px 0;
+  transition: max-height 0.5s ease; /* Add transition for max-height */
+  overflow: hidden;
+}
+
+.accrodion-content p {
+  font-size: 16px;
+}
+
+.accrodion.active .accrodion-content {
+  display: block;
+  max-height: 1000px; /* Set a maximum height to allow smooth transition */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  width: 800px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  width: 800px;
+  outline: none;
+}
+
+#searchButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 16px 20px;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+#searchButton:hover {
+  background-color: #45a049;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  text-align: center;
+  margin-top: 50px;
+  height: 400px;
+}
+
+/* .register-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  text-align: center;
+  height: 500px;
+  margin-top: -50px;
+} */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  text-align: start;
+}
+
+.form-input {
+  width: 350px !important;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+.register-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: #0056b3;
+}
+
+.modal-container {
+  height: 600px;
+}
+
+.main-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Add this to your CSS or styling file */
+.main-menu__list li.active a {
+  color: #fff !important; /* Replace with your desired text color for the active item */
+  /* Add any other styles for the active menu item */
+}
