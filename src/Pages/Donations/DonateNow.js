@@ -28,11 +28,6 @@ const DonateNow = () => {
                     Enter your donation
                   </h3>
                   <div className="donate-now__enter-donation-input">
-                    <select className="selectpicker">
-                      <option>$</option>
-                      <option>₤</option>
-                      <option>¥</option>
-                    </select>
                     <input
                       type="text"
                       name="donation-money"
@@ -150,6 +145,7 @@ const DonateNow = () => {
                       className={`payment-option col-xl-5 ${
                         activeButton === 0 ? "active" : ""
                       }`}
+                      style={{ cursor: "pointer" }}
                       onClick={() => handleButtonClick(0)}
                     >
                       <p className=""> Online Payment</p>

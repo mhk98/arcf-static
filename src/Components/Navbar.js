@@ -157,7 +157,9 @@ const Navbar = () => {
                             <div className="content">
                               {/* <p>Helpline</p> */}
                               <h5 className="">
-                                <Link to="tel:980009630">+880 2224412300</Link>
+                                <Link to="tel:980009630">
+                                  +880 2224412300 | +880 1922694910
+                                </Link>
                               </h5>
                             </div>
                           </li>

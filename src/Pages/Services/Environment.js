@@ -1,23 +1,57 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 const Environment = () => {
   return (
     <div>
       {/*Donation Details Start*/}
 
       <section className="page-header">
-        <div
+        <Swiper
           className="page-header-bg"
-          style={{
-            backgroundImage:
-              "url(assets/images/backgrounds/page-header-bg.jpg)",
-          }}
-        ></div>
+          modules={[Navigation, Pagination, Autoplay, EffectFade]}
+          spaceBetween={0} // Adjust space between slides if needed
+          slidesPerView={1}
+          effect="fade"
+          loop={true}
+          autoplay={{ delay: 2000 }}
+        >
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/page-header-bg.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/project-banner.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/page-header-bg.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          {/* Add more SwiperSlides if needed */}
+        </Swiper>
+
         <div className="container">
           <div className="page-header__inner">
             <ul className="thm-breadcrumb list-unstyled">
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
                 <span>/</span>

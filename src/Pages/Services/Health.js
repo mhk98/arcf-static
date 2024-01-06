@@ -5,19 +5,59 @@ import project1 from "../../image/health/Free-friday-clinic.jpg";
 import project5 from "../../image/health/Health-Awareness-&-Medical.jpg";
 import project4 from "../../image/health/Maternal and Child Immunization Program.jpg";
 import project2 from "../../image/health/Medical-treatment-low-cot.jpg";
-
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 const Health = () => {
+  const handleMenuClick = () => {
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Add smooth scrolling behavior
+    });
+  };
   return (
     <div>
       {/*Page Header Start*/}
       <section className="page-header">
-        <div
+        <Swiper
           className="page-header-bg"
-          style={{
-            backgroundImage:
-              "url(assets/images/backgrounds/page-header-bg.jpg)",
-          }}
-        ></div>
+          modules={[Navigation, Pagination, Autoplay, EffectFade]}
+          spaceBetween={0} // Adjust space between slides if needed
+          slidesPerView={1}
+          effect="fade"
+          loop={true}
+          autoplay={{ delay: 2000 }}
+        >
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/page-header-bg.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/project-banner.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/page-header-bg.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          {/* Add more SwiperSlides if needed */}
+        </Swiper>
+
         <div className="container">
           <div className="page-header__inner">
             <ul className="thm-breadcrumb list-unstyled">
@@ -25,7 +65,7 @@ const Health = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <span className="ms-2">/</span>
+                <span>/</span>
               </li>
               <li className="active">Pages</li>
             </ul>
@@ -35,7 +75,7 @@ const Health = () => {
       </section>
       {/*Page Header End*/}
 
-      <Link to="/projects">
+      <Link to="/projects" onClick={() => handleMenuClick()}>
         <div
           className="container"
           style={{
@@ -116,10 +156,13 @@ const Health = () => {
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <Link to="/donate-details">
+              <Link to="/donate-details" onClick={() => handleMenuClick()}>
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <Link to="/donate-details">
+                    <Link
+                      to="/donate-details"
+                      onClick={() => handleMenuClick()}
+                    >
                       <img src={project1} alt="" />
                     </Link>
                     <div className="causes-one__cat">
@@ -128,7 +171,12 @@ const Health = () => {
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/donate-details">Free Friday Clinic</Link>
+                      <Link
+                        to="/donate-details"
+                        onClick={() => handleMenuClick()}
+                      >
+                        Free Friday Clinic
+                      </Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
                       A Free Friday Clinic for poor families to be aware or
@@ -136,6 +184,7 @@ const Health = () => {
                       providing free medicine.
                       <span className="ms-2">
                         <Link
+                          onClick={() => handleMenuClick()}
                           to="/donate-details"
                           style={{ fontWeight: "bold" }}
                         >
@@ -151,10 +200,13 @@ const Health = () => {
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <Link to="/donate-details">
+              <Link to="/donate-details" onClick={() => handleMenuClick()}>
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <Link to="/donate-details">
+                    <Link
+                      to="/donate-details"
+                      onClick={() => handleMenuClick()}
+                    >
                       <img src={project2} alt="" />
                     </Link>
                     <div className="causes-one__cat">
@@ -163,7 +215,10 @@ const Health = () => {
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/donate-details">
+                      <Link
+                        to="/donate-details"
+                        onClick={() => handleMenuClick()}
+                      >
                         Medical Treatment Support
                       </Link>
                     </h3>
@@ -174,6 +229,7 @@ const Health = () => {
                         <Link
                           to="/donate-details"
                           style={{ fontWeight: "bold" }}
+                          onClick={() => handleMenuClick()}
                         >
                           see more...
                         </Link>
@@ -188,10 +244,13 @@ const Health = () => {
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <Link to="/donate-details">
+              <Link to="/donate-details" onClick={() => handleMenuClick()}>
                 <div className="causes-one__single">
                   <div className="causes-one__img">
-                    <Link to="/donate-details">
+                    <Link
+                      to="/donate-details"
+                      onClick={() => handleMenuClick()}
+                    >
                       <img src={project3} alt="" />
                     </Link>
                     <div className="causes-one__cat">
@@ -200,42 +259,11 @@ const Health = () => {
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/donate-details">Cancer Treatment</Link>
-                    </h3>
-                    <p className="causes-one__text" style={{ color: "black" }}>
-                      Books, all kinds of educational materials, computers, etc.
-                      are distributed free of cost to poor students.
-                      <span className="ms-2">
-                        <Link
-                          to="/donate-details"
-                          style={{ fontWeight: "bold" }}
-                        >
-                          see more...
-                        </Link>
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div
-              className="col-xl-4 col-lg-4 wow fadeInUp"
-              data-wow-delay="100ms"
-            >
-              <Link to="/donate-details">
-                <div className="causes-one__single">
-                  <div className="causes-one__img">
-                    <Link to="/donate-details">
-                      <img src={project4} alt="" />
-                    </Link>
-                    <div className="causes-one__cat">
-                      <p className="mt-2">Maternal and Child Program</p>
-                    </div>
-                  </div>
-                  <div className="causes-one__content">
-                    <h3 className="causes-one__title">
-                      <Link to="/donate-details">
-                        Maternal and Child Program
+                      <Link
+                        to="/donate-details"
+                        onClick={() => handleMenuClick()}
+                      >
+                        Cancer Treatment
                       </Link>
                     </h3>
                     <p className="causes-one__text" style={{ color: "black" }}>
@@ -258,7 +286,50 @@ const Health = () => {
               className="col-xl-4 col-lg-4 wow fadeInUp"
               data-wow-delay="100ms"
             >
-              <Link to="/donate-details">
+              <Link to="/donate-details" onClick={() => handleMenuClick()}>
+                <div className="causes-one__single">
+                  <div className="causes-one__img">
+                    <Link
+                      to="/donate-details"
+                      onClick={() => handleMenuClick()}
+                    >
+                      <img src={project4} alt="" />
+                    </Link>
+                    <div className="causes-one__cat">
+                      <p className="mt-2">Maternal and Child Program</p>
+                    </div>
+                  </div>
+                  <div className="causes-one__content">
+                    <h3 className="causes-one__title">
+                      <Link
+                        to="/donate-details"
+                        onClick={() => handleMenuClick()}
+                      >
+                        Maternal and Child Program
+                      </Link>
+                    </h3>
+                    <p className="causes-one__text" style={{ color: "black" }}>
+                      Books, all kinds of educational materials, computers, etc.
+                      are distributed free of cost to poor students.
+                      <span className="ms-2">
+                        <Link
+                          to="/donate-details"
+                          style={{ fontWeight: "bold" }}
+                          onClick={() => handleMenuClick()}
+                        >
+                          see more...
+                        </Link>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div
+              className="col-xl-4 col-lg-4 wow fadeInUp"
+              data-wow-delay="100ms"
+            >
+              <Link to="/donate-details" onClick={() => handleMenuClick()}>
                 <div className="causes-one__single">
                   <div className="causes-one__img">
                     <Link to="/donate-details">
@@ -270,7 +341,10 @@ const Health = () => {
                   </div>
                   <div className="causes-one__content">
                     <h3 className="causes-one__title">
-                      <Link to="/donate-details">
+                      <Link
+                        to="/donate-details"
+                        onClick={() => handleMenuClick()}
+                      >
                         Health Awareness & Medical Camp
                       </Link>
                     </h3>
@@ -281,6 +355,7 @@ const Health = () => {
                         <Link
                           to="/donate-details"
                           style={{ fontWeight: "bold" }}
+                          onClick={() => handleMenuClick()}
                         >
                           see more...
                         </Link>

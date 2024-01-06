@@ -2441,6 +2441,7 @@ body.locked .page-wrapper {
   position: relative;
   display: block;
   z-index: 91;
+  
 }
 
 .main-slider .swiper-slide {

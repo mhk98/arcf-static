@@ -14,11 +14,12 @@ import p1 from "../image/health/Health-Care-Program.jpg";
 import project1 from "../image/health/Medical-treatment-low-cot.jpg";
 import p3 from "../image/micocredit/Microcredit-Program.jpg";
 import project6 from "../image/old-home/Old-Home.jpg";
+import banner from "../image/What-We-Do.png";
 import {
   default as p6,
   default as project5,
 } from "../image/orphanage/Orphanage.jpg";
-import project3 from "../image/quality-life/Human-Aid.jpg";
+import project3 from "../image/quality-life/Improving-Quality-Of-Life.jpg";
 import p4 from "../image/quality-life/Improving-Quality-Of-Life.jpg";
 
 // import Swiper core and required modules
@@ -416,13 +417,13 @@ const Home = () => {
                           // }}
                         >
                           <SwiperSlide>
-                            <img  src={h1} alt="" />
+                            <img src={h1} alt="" />
                           </SwiperSlide>
                           <SwiperSlide>
                             <img src={h1} alt="" />
                           </SwiperSlide>
                           <SwiperSlide>
-                            <img  src={h1} alt="" />
+                            <img src={h1} alt="" />
                           </SwiperSlide>
                         </Swiper>
                       </div>

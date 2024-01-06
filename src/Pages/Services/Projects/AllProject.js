@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useGetAllProjectsBannerQuery } from "../../../Redux/features/projectBanner/projectBanner";
 import { useGetAllProjectsQuery } from "../../../Redux/features/projects/projects";
@@ -77,59 +77,51 @@ const AllProject = () => {
       <section className="page-header">
         <Swiper
           className="page-header-bg"
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Navigation, Pagination, Autoplay, EffectFade]}
+          spaceBetween={0} // Adjust space between slides if needed
           slidesPerView={1}
           effect="fade"
           loop={true}
-          autoplay={{
-            delay: 2000,
-          }}
-          // breakpoints={{
-          //   // Define breakpoints for different screen sizes
-          //   0: {
-          //     slidesPerView: 2, // Show 2 slides on smaller screens like mobile devices
-          //     spaceBetween: 10, // Adjust spacing for smaller screens
-          //   },
-          //   768: {
-          //     slidesPerView: 4, // Show 4 slides on tablets
-          //     spaceBetween: 15,
-          //   },
-          //   1024: {
-          //     slidesPerView: 6, // Show 6 slides on larger screens like desktops
-          //     spaceBetween: 20,
-          //   },
-          // }}
+          autoplay={{ delay: 5000 }}
         >
-          <SwiperSlide
-            style={{
-              backgroundImage:
-                "url(assets/images/backgrounds/project-banner.jpg)",
-            }}
-          ></SwiperSlide>
-          <SwiperSlide
-            style={{
-              backgroundImage:
-                "url(assets/images/backgrounds/project-banner.jpg)",
-            }}
-          ></SwiperSlide>
-          <SwiperSlide
-            style={{
-              backgroundImage:
-                "url(assets/images/backgrounds/project-banner.jpg)",
-            }}
-          ></SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/page-header-bg.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/project-banner.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div
+              className="page-header-bg"
+              style={{
+                backgroundImage:
+                  "url(assets/images/backgrounds/page-header-bg.jpg)",
+              }}
+            ></div>
+          </SwiperSlide>
+          {/* Add more SwiperSlides if needed */}
         </Swiper>
 
         <div className="container">
           <div className="page-header__inner">
             <ul className="thm-breadcrumb list-unstyled">
               <li>
-                <Link to="/" onClick={() => handleMenuClick()}>
-                  Home
-                </Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <span className="ms-2">/</span>
+                <span>/</span>
               </li>
               <li className="active">Pages</li>
             </ul>
@@ -239,7 +231,11 @@ const AllProject = () => {
                     ARC Foundation's Health Care Program is a lifeline for those
                     in need. We provide vital medical assistance.
                     <span className="ms-2">
-                      <Link to="/education" style={{ fontWeight: "bold" }}>
+                      <Link
+                        to="/education"
+                        style={{ fontWeight: "bold" }}
+                        onClick={() => handleMenuClick()}
+                      >
                         see more...
                       </Link>
                     </span>
@@ -290,7 +286,7 @@ const AllProject = () => {
               <div className="causes-one__single">
                 <div className="causes-one__img">
                   <Link onClick={() => handleMenuClick()} to="/environment">
-                    <img src={project3} alt />
+                    <img src={project3} alt="" />
                   </Link>
                   <div className="causes-one__cat">
                     <p className="mt-2">Environment</p>
@@ -306,7 +302,11 @@ const AllProject = () => {
                     ARC Foundation's Health Care Program is a lifeline for those
                     in need. We provide vital medical assistance.{" "}
                     <span className="ms-2">
-                      <Link to="/environment" style={{ fontWeight: "bold" }}>
+                      <Link
+                        to="/environment"
+                        style={{ fontWeight: "bold" }}
+                        onClick={() => handleMenuClick()}
+                      >
                         see more...
                       </Link>
                     </span>
@@ -321,7 +321,7 @@ const AllProject = () => {
               <div className="causes-one__single">
                 <div className="causes-one__img">
                   <Link to="/orphanage" onClick={() => handleMenuClick()}>
-                    <img src={project4} alt />
+                    <img src={project4} alt="" />
                   </Link>
                   <div className="causes-one__cat">
                     <p className="mt-2">Orphanage</p>
